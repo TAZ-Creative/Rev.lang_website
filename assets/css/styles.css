@@ -24,7 +24,8 @@ h2 {
   line-height: 1.07;
 }
 h3 {
-  font-size: 32px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.04;
 }
 
 h4 {
@@ -218,7 +219,7 @@ nav {
 }
 
 @media (max-width: 650px) {
-  .hero-section h1 {
+  .body--wrapper h1 {
     margin-top: 48px;
   }
 }
@@ -348,9 +349,88 @@ nav {
   color: #111827;
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .upper-footer ul,
-.lower-footer ul {
+  .lower-footer ul {
+    flex-flow: row wrap;
+  }
+}
+
+.app-menu--container {
+  padding-top: 48px;
+}
+
+.app-menu--container header {
+  text-align: center;
+  max-width: 560px;
+  margin: auto;
+}
+
+.app-menu--container header h1 {
+  margin-bottom: 16px;
+}
+
+/* .app-menu--container header p{
+  margin-bottom: 16px;
+} */
+.language-select--wrapper {
+  margin-top: 60px;
+}
+.languages--container {
+  display: flex;
+  gap: 24px;
   flex-flow: row wrap;
+}
+
+.language {
+  background-color: #fff;
+  color: #0f0049;
+  border-radius: 8px;
+  padding: 24px;
+  flex: 1;
+  width: calc(25% - 24px);
+}
+.language img {
+  width: 70px;
+  height: auto;
+}
+.language h3 {
+  margin: 24px 0 16px;
+  max-width: 100px;
+}
+
+.language-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-menu--container div.nav--btn{
+  text-align: center;
+  margin: 60px 0;
+}
+.app-menu--container button.nav--btn{
+  border-radius: 8px;
+  background: transparent;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .language {
+    flex: unset;
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 500px) {
+  .language {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .language {
+    padding: 24px;
+    width: calc(100% - 0px);
   }
 }

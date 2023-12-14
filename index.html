@@ -4,90 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rev.lang</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper max-width">
         <div class="logo"><img src="assets/images/rev-logo.png" alt="" /></div>
-        <ul class="nav-links">
-          <li class="nav-item">Home</li>
-          <li class="nav-item">About</li>
-          <li class="nav-item">Contact</li>
+
+        <div class="navbar__Link-toggle">
+					<i class="ri-menu-3-line"></i>
+				</div>
+
+        <ul class="nav-links navbar__items">
+          <li class="nav-item"><a href="">Home</a></li>
+          <li class="nav-item"><a href="">About</a></li>
+          <li class="nav-item"><a href="">Contact</a></li>
         </ul>
-        <div class="cta-container">
+
+        <div class="cta-container navbar__items">
           <button class="btn cta-btn"><a href="">Open App</a></button>
         </div>
       </div>
     </nav>
+    <div class="body--wrapper">
+      <section class="hero-section">
+        <article class="upper--folds max-width">
+          <h1>
+            Rev.lang helps you revise verbs and nouns in other African languages
+          </h1>
+          <p>
+            Verbs and nouns are the major words that language people struggle to
+            learn while learning languages even with language learning apps like
+            Duolingo, this app helps your vocabulary by providing word cards to
+            revise with in form of flash cards
+          </p>
+          <small
+            ><img src="assets/images/mark.svg" alt="" /> This is a school
+            project.</small
+          >
+          <img src="assets/images/hero-img.png" alt="" class="banner-img" />
+        </article>
 
-    <section class="hero-section">
-      <article class="upper--folds max-width">
-        <h1>
-          Rev.lang helps you revise verbs and nouns in other African languages
-        </h1>
-        <p>
-          Verbs and nouns are the major words that language people struggle to
-          learn while learning languages even with language learning apps like
-          Duolingo, this app helps your vocabulary by providing word cards to
-          revise with in form of flash cards
-        </p>
-        <small>This a school project.</small>
-        <img src="assets/images/hero-img.png" alt="" />
-      </article>
+        <hr />
 
-      <hr />
-
-      <div class="support--container max-width">
-        <p class="bold">My project is supported by</p>
-        <div class="supports">
-          <img src="assets/images/TLU_logo.png" alt="Talinna Ulikool logo" />
-          <img src="assets/images/DTI_logo.png" alt="DIT logo" />
-          <img src="assets/images/M.OCKBA.png" alt="m.ockba" />
+        <div class="support--container max-width">
+          <div class="text-description">
+            <p class="bold">My project is supported by</p>
+          </div>
+          <div class="supports">
+            <img src="assets/images/TLU_logo.png" alt="Talinna Ulikool logo" />
+            <img src="assets/images/DTI_logo.png" alt="DIT logo" />
+            <img src="assets/images/M.OCKBA.png" alt="m.ockba" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="cta--section">
-      <div class="cta--section-wrapper">
-        <h2>Start learning new verbs and nouns</h2>
-        <p>Supporting only 4 languages at the moment</p>
-        <div class="languages-group">
-          <span>HAUSA |</span>
-          <span>YORUBA |</span>
-          <span>XHOSA |</span>
-          <span>TWI</span>
+      <section class="cta--section">
+        <div class="cta--section-wrapper max-width">
+          <h2>Start learning new verbs and nouns</h2>
+          <p>Supporting only 4 languages at the moment</p>
+          <div class="languages-group">
+            <span>HAUSA |</span>
+            <span>YORUBA |</span>
+            <span>XHOSA |</span>
+            <span>TWI</span>
+          </div>
+          <button class="btn cta-btn"><a href="">Open App</a></button>
         </div>
-        <button class="btn cta-btn"><a href="">Open App</a></button>
-      </div>
-    </section>
+      </section>
 
-    <section class="testimonials--section">
-      <div class="testimonials--section-wrapper">
-        <h2>See what people have to say about rev.lang</h2>
-        <main class="testimonials--container">
-          <article class="testimonial">
-            <img src="" alt="" />
-            <div class="text--description">
-              <h5>Mateen Damola</h5>
-              <p>
-                I think this is the application language learners are waiting
-                for. It complements my learning. Since I can already construct
-                simple sentences, and all I need to know is verbs and names of
-                things in the other language.
-              </p>
-              <button class="prev">prev</button>
-              <button class="next">next</button>
-            </div>
-          </article>
-        </main>
-      </div>
-    </section>
+      <section class="testimonials--section">
+        <div class="testimonials--section-wrapper max-width">
+          <h2>See what people have to say about rev.lang</h2>
+          <main class="testimonials--container">
+            <article class="testimonial">
+              <div class="img-container">
+                <img src="assets/images/img-1.jpg" alt="" />
+              </div>
+              <div class="text--description">
+                <h4>Mateen Damola</h4>
+                <p>
+                  I think this is the application language learners are waiting
+                  for. It complements my learning. Since I can already construct
+                  simple sentences, and all I need to know is verbs and names of
+                  things in the other language.
+                </p>
+                <button class="prev">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button class="next">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+            </article>
+          </main>
+        </div>
+      </section>
+    </div>
 
     <footer>
-      <main class="footer-container">
+      <main class="footer-container max-width">
         <div class="upper-footer">
-          <img src="" alt="" />
+          <img src="assets/images/rev-logo.png" alt="" />
           <ul>
             <li><a href="">The Creator</a></li>
             <li><a href="">About</a></li>

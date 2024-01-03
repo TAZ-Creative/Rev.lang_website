@@ -404,11 +404,11 @@ nav {
   color: inherit;
 }
 
-.app-menu--container div.nav--btn{
+.app-menu--container div.nav--btn {
   text-align: center;
   margin: 60px 0;
 }
-.app-menu--container button.nav--btn{
+.app-menu--container button.nav--btn {
   border-radius: 8px;
   background: transparent;
   border: 1.5px solid #fff;
@@ -433,4 +433,165 @@ nav {
     padding: 24px;
     width: calc(100% - 0px);
   }
+}
+
+.app--container .container {
+  max-width: 450px;
+  margin: auto;
+}
+
+.app--container header {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.app--container header h1 {
+  margin-bottom: 8px;
+}
+
+.app--container .word--card {
+  max-width: 500px;
+  margin: 48px auto 24px;
+  background-color: #fff;
+  color: #0f0049;
+  border-radius: 16px;
+  padding: 12px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app--container .word--card div {
+  text-align: center;
+}
+.app--container .word--card div h4 {
+  margin-bottom: 16px;
+}
+
+.app--container .word--card div p {
+  margin-bottom: 16px;
+}
+
+.app--container .word--card .translate-btn {
+  border-radius: 8px;
+  background: transparent;
+  border: 1.5px solid #0a85ea;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px;
+  color: #0a85ea;
+  transition: 0.2s;
+}
+
+.app--container .word--card .translate-btn:hover {
+  color: #0f0049;
+  border: 1.5px solid #0f0049;
+  transition: 0.2s;
+}
+
+.app--container .btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.app--container .nav--btn {
+  border-radius: 8px;
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.app--container .generate-btn {
+  background-color: #fff;
+  border: unset;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #0a85ea;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .app--container header h1 {
+    margin-top: 70px;
+  }
+}
+
+.gallery-header {
+  background-color: #0a85ea;
+  text-align: center;
+  padding: 12px;
+  color: #fff;
+  /* min-height: 200px; */
+}
+.gallery-header header {
+  max-width: 600px;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-header header h1 {
+  margin-bottom: 16px;
+}
+
+.gallery-content .filter--header {
+  margin-bottom: 24px;
+}
+.gallery-content .filter-btn {
+  border-radius: 16px;
+  background: transparent;
+  border: 1.5px solid #0f0049;
+  color: #0f0049;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.gallery-content h2{
+  margin-bottom: 24px;
+}
+
+.gallery--wrapper {
+  display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.gallery--wrapper img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+.gallery--wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.gallery--wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.gallery--wrapper .wide {
+	grid-column: span 2;
+}
+.gallery--wrapper .tall {
+	grid-row: span 2;
+}
+.gallery--wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
 }

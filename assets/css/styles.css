@@ -29,8 +29,37 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
 }
+
+.anyWord {
+  font-size: clamp(3rem, 2vw, 1.5rem);
+}
+
+.translatedWord {
+  color: #0a85ea;
+  font-weight: 500;
+  transition: 0.2s all;
+  border-style: dashed;
+  border-radius: 60px;
+  border-color: rgb(192, 216, 237);
+  margin-top: 20px;
+}
+
+#listen-btn {
+  border: 0px;
+  border-radius: 60px;
+  padding: 8px 15px;
+  background-color: #ff3a61;
+  color: #fff;
+  transition: 0.2s;
+}
+
+#listen-btn:hover {
+  background-color: #ee496a;
+  transition: 0.2s;
+}
+
 
 p {
   font-family: inherit;

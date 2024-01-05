@@ -1,5 +1,14 @@
 "use strict";
 
+/* 
+ 1.⁠ ⁠Set language of translateFrom
+ 2.⁠ ⁠translateTo language is always English
+ 3.⁠ Pick random word from word array. This random word is q.
+ 4.⁠ ⁠Display Random word.
+ 5.⁠ ⁠See Meaning button translates text.
+ 6.⁠ ⁠Display Translation.
+*/
+
 function classToggle() {
   const navItems = document.querySelectorAll(".navbar__items");
   navItems.forEach((navItem) => navItem.classList.toggle("navbar__ToggleShow"));

@@ -4,9 +4,9 @@ function classToggle() {
   const navItems = document.querySelectorAll(".navbar__items");
   navItems.forEach((navItem) => navItem.classList.toggle("navbar__ToggleShow"));
 }
-document
-  .querySelector(".navbar__Link-toggle")
-  .addEventListener("click", classToggle);
+
+const navbarLink = document.querySelector(".navbar__Link-toggle");
+navbarLink.addEventListener("click", classToggle);
 
 const testimonials = [
   {
@@ -35,6 +35,9 @@ const totalTestimonials = testimonials.length;
 const testimonialContainer = document.querySelector(".testimonials--container");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+const imgContainer = document.querySelector(".img-container img");
+const nameElement = document.querySelector(".text--description h4");
+const testimonialElement = document.querySelector(".text--description p");
 
 nextBtn.addEventListener("click", () => {
   currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
@@ -50,10 +53,6 @@ prevBtn.addEventListener("click", () => {
 
 function displayCurrentTestimonial() {
   const currentTestimonial = testimonials[currentTestimonialIndex];
-
-  const imgContainer = document.querySelector(".img-container img");
-  const nameElement = document.querySelector(".text--description h4");
-  const testimonialElement = document.querySelector(".text--description p");
 
   imgContainer.src = currentTestimonial.image;
   nameElement.textContent = currentTestimonial.name;

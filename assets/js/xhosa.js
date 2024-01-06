@@ -48,7 +48,7 @@ nxtBtn.addEventListener("click", () => {
         .then(data => {
         const generatedWord = data.choices[0].message.content;
         newWord.textContent = generatedWord;
-        transWord.textContent = ""; // Assuming you want to clear the translated word
+        transWord.textContent = ""; 
         })
         .catch(error => {
             console.error('Error fetching data from OpenAI API:', error);

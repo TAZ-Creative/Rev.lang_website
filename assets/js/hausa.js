@@ -20,7 +20,7 @@ translateBtn.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        transWord.textContent = data.responseData.translatedText; // Set translated text here
+        transWord.textContent = data.responseData.translatedText; // translated text 
     })
 
 speakBtn.addEventListener("click", () => {

@@ -1,4 +1,4 @@
-const API_KEY = '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'
+const API_KEY = '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'
 
 const newWord = document.querySelector(".anyWord")
 const transWord = document.querySelector(".translatedWord")
@@ -6,7 +6,7 @@ translateBtn = document.querySelector(".translate-btn")
 nxtBtn = document.querySelector(".generate-btn")
 speakBtn = document.querySelector("#listen-btn")
 
-const zuluWord = ["káàbọ̀"];
+const zuluWord = ["sawubona"];
 
 newWord.textContent = zuluWord[0]
 
@@ -41,7 +41,7 @@ nxtBtn.addEventListener("click", () => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: "Generate an everyday word in zulu language. Strictly write only this single word and nothing else." }]
+            messages: [{ role: "user", content: "Generate a word in zulu language. Strictly write only this single word and nothing else." }]
         })
     })
         .then(response => response.json())

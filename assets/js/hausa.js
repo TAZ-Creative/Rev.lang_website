@@ -1,4 +1,4 @@
-const API_KEY = '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'
+const API_KEY = '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'
 
 const newWord = document.querySelector(".anyWord")
 const transWord = document.querySelector(".translatedWord")

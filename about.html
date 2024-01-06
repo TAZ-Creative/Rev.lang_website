@@ -28,10 +28,10 @@
         </div>
 
         <ul class="nav-links navbar__items">
-            <li class="nav-item"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="about.html">About</a></li>
-            <li class="nav-item"><a href="gallery.html">Discover</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="gallery.html">Discover</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
 
         <div class="cta-container navbar__items">
@@ -41,85 +41,149 @@
         </div>
       </div>
     </nav>
-    <div class="body--wrapper">
+    <div class="about--wrapper">
       <section class="hero-section">
         <article class="upper--folds max-width">
-          <h1>
-            About Learn.lang 
-          </h1>
-          <h4>Why Learn.lang</h4>
-          <img src="assets/images/hero-img.png" alt="" class="banner-img" />
-    
+          <h1>About Learn.lang</h1>
           <p>
-            At Learn.lang, we understand the importance of learning languages in a way that reflects real-life usage. Unlike traditional language learning apps, such as Duolingo, we leverage the power of artificial intelligence (AI) to provide you with words and simple sentences that you may not find elsewhere. Our goal is to enhance your vocabulary by offering flashcards featuring everyday words, allowing you to effortlessly revise and reinforce your learning, no matter where you are.
+            Our goal is to help you learn African languages on the go, by
+            getting words that people use everyday.
           </p>
-        </article>  
-        
-
-       
-      </section>
-
-      <section class="cta--section">
-        <div class="cta--section-wrapper max-width">
-            <h4>Features</h4>
-            <p class="bold">Flashcards for Everyday Words: </p>
-            <p>Our app focuses on providing you with flashcards featuring common words used in daily life. These flashcards are designed to make learning practical and applicable to real-world scenarios.</p>
-
-            <p class="bold">On-the-Go Learning: </p>
-            <p>Learn.lang is your companion for learning African languages wherever you go. Whether you're commuting, waiting in line, or taking a break, our app is there to help you make the most of your time.</p>
-            
-          <button class="btn cta-btn">
-            <a href="app-menu.html">Open App</a>
-          </button>
-        </div>
-
-        <div class="cta--section-wrapper max-width">
-            <h4>Supported Languages</h4>
-            <p>Learn.lang currently supports the following African languages. You also have to be an english speaker to use Learn.lang</p>
-            <p class="bold">Xhosa (South Africa) </p>
-            <p class="bold">Hausa (Nigeria)</p>
-            <p class="bold">Yoruba (Yoruba)</p>
-            <p class="bold">Zulu (South Africa) </p>   
-        
-        </div>
-
-        <article class="cta--section-wrapper max-width">
-            <h4 class=>About the Cultures</h4>
-            <div class="tab--header">
-              <button class="tab-btn active">Yoruba</button>
-              <button class="tab-btn">Zulu</button>
-              <button class="tab-btn">Xhosa (South Africa)</button>
-              <button class="tab-btn">Hausa</button>
-            </div>
-      
-            
-            <article class="about--wrapper">
-            
-              <div class="">
-                <img src="assets/images/image-5.png" alt="">
-                <p>Xhosa culture is rich and diverse, with a history deeply rooted in South Africa. Known for their distinctive click sounds in the language, the Xhosa people have a vibrant cultural heritage that includes traditional music, dance, and storytelling. The Xhosa initiation ceremony, marking the transition to adulthood, is a significant cultural practice. Traditional attire, adorned with colorful beadwork, plays a crucial role in expressing cultural identity.
-                </p>
-              </div>
-             
-            </article>
         </article>
       </section>
 
-      <section class="reach--section">
+      <section class="about-learn_lang--section">
+        <div class="max-width">
+          <h2>About Learn.lang</h2>
+          <img src="assets/images/about-hero-img.png" alt="" />
+          <p>
+            At Learn.lang, we understand the importance of learning languages in
+            a way that reflects real-life usage. Unlike traditional language
+            learning apps, such as Duolingo, we leverage the power of artificial
+            intelligence (AI) to provide you with words and simple sentences
+            that you may not find elsewhere. Our goal is to enhance your
+            vocabulary by offering flashcards featuring everyday words, allowing
+            you to effortlessly revise and reinforce your learning, no matter
+            where you are.
+          </p>
+
+          <article class="website--features">
+            <h3>Features</h3>
+            <p>
+              <span class="bold">Flashcards for Everyday Words:</span>
+              Our app focuses on providing you with flashcards featuring common
+              words used in daily life. These flashcards are designed to make
+              learning practical and applicable to real-world scenarios.
+            </p>
+
+            <p>
+              <span class="bold">On-the-Go Learning:</span>
+              Learn.lang is your companion for learning African languages
+              wherever you go. Whether you're commuting, waiting in line, or
+              taking a break, our app is there to help you make the most of your
+              time.
+            </p>
+          </article>
+
+          <article class="supported-languages">
+            <h3>Supported Languages</h3>
+            <p>
+              Learn.lang currently supports the following African languages. You
+              also have to be an english speaker to use Learn.lang
+            </p>
+            <ul>
+              <li>Xhosa (South Africa)</li>
+              <li>Hausa (Nigeria)</li>
+              <li>Yoruba (Yoruba)</li>
+              <li>Zulu (South Africa)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-cultures__section">
+        <div class="about-cultures--wrapper max-width">
+          <h3 class="">About the Cultures</h3>
+          <div class="tab--header">
+            <button class="tab-btn active" onclick="tabControl(event, 'yoruba')">Yoruba</button>
+            <button class="tab-btn" onclick="tabControl(event, 'zulu')">Zulu</button>
+            <button class="tab-btn" onclick="tabControl(event, 'xhosa')">Xhosa (South Africa)</button>
+            <button class="tab-btn" onclick="tabControl(event, 'hausa')">Hausa</button>
+          </div>
+        
+
+          <article class="yoruba-culture culture-tab active-tab" id="yoruba">
+            <img src="assets/images/img-wide.png" alt="" />
+            <p>
+              Yoruba culture is rich and diverse, with a history deeply rooted in
+              South Africa. Known for their distinctive click sounds in the
+              language, the Xhosa people have a vibrant cultural heritage that
+              includes traditional music, dance, and storytelling. The Xhosa
+              initiation ceremony, marking the transition to adulthood, is a
+              significant cultural practice. Traditional attire, adorned with
+              colorful beadwork, plays a crucial role in expressing cultural
+              identity.
+            </p>
+          </article>
+
+          <article class="yoruba-culture culture-tab" id="zulu">
+            <img src="assets/images/img-wide.png" alt="" />
+            <p>
+              Zulu culture is rich and diverse, with a history deeply rooted in
+              South Africa. Known for their distinctive click sounds in the
+              language, the Xhosa people have a vibrant cultural heritage that
+              includes traditional music, dance, and storytelling. The Xhosa
+              initiation ceremony, marking the transition to adulthood, is a
+              significant cultural practice. Traditional attire, adorned with
+              colorful beadwork, plays a crucial role in expressing cultural
+              identity.
+            </p>
+          </article>
+
+          <article class="yoruba-culture culture-tab" id="xhosa">
+            <img src="assets/images/img-wide.png" alt="" />
+            <p>
+              Xhosa culture is rich and diverse, with a history deeply rooted in
+              South Africa. Known for their distinctive click sounds in the
+              language, the Xhosa people have a vibrant cultural heritage that
+              includes traditional music, dance, and storytelling. The Xhosa
+              initiation ceremony, marking the transition to adulthood, is a
+              significant cultural practice. Traditional attire, adorned with
+              colorful beadwork, plays a crucial role in expressing cultural
+              identity.
+            </p>
+          </article>
+
+          <article class="yoruba-culture culture-tab" id="hausa">
+            <img src="assets/images/img-wide.png" alt="" />
+            <p>
+              Hausa culture is rich and diverse, with a history deeply rooted in
+              South Africa. Known for their distinctive click sounds in the
+              language, the Xhosa people have a vibrant cultural heritage that
+              includes traditional music, dance, and storytelling. The Xhosa
+              initiation ceremony, marking the transition to adulthood, is a
+              significant cultural practice. Traditional attire, adorned with
+              colorful beadwork, plays a crucial role in expressing cultural
+              identity.
+            </p>
+          </article>
+
+
+        </div>
+      </section>
+
+      <section class="add-language__section">
         <div class="reach--section-wrapper max-width">
-          <main class="reach--container">
-            <article class="testimonial">
-              <div class="text--description">
-                <h4>Want to add your language?</h4>
-                <p>
-                    We are open to receiving ideas by you to improve the app
-                </p>
-                <button class="">
-                    Contact us
-                  </button>
-              </div>
-            </article>
-          </main>
+          <article class="flex-container">
+            <div class="text--description">
+              <h4>Want to add your language?</h4>
+            </div>
+
+            <div class="img-container">
+              <p>We are open to receiving ideas by you to improve the app</p>
+              <a href="mailto:azeem@tazcreative.io">Click here to email us</a>
+            </div>
+          </article>
         </div>
       </section>
     </div>
@@ -130,8 +194,8 @@
           <img src="assets/images/rev-logo.png" alt="" />
           <ul>
             <li><a href="https://www.linkedin.com/in/firstazeem">The Creator</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 

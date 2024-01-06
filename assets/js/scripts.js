@@ -26,16 +26,16 @@ const testimonials = [
     image: "assets/images/img-1.jpg",
   },
   {
-    name: "Azeem Olawale",
+    name: "Iman Gbadamosi",
     testimonial:
-      " I think this is the application language learners are waiting for. It complements my learning. Since I can already construct simple sentences, and all I need to know is verbs and names of things in the other language.",
-    image: "assets/images/img-1.jpg",
+      " I have no doubt that language learners will find this helpful. I am impressed with the fact that it includes a gallery in case you want to feed your eyes. Thank you creating this.",
+    image: "assets/images/img-3.jpeg",
   },
   {
-    name: "Yuri Gagarin",
+    name: "Hisham Heddad",
     testimonial:
       " This app was my companion in space. I spoke with a lot of Africans I met there without any issues. Thank you for creating something this great.",
-    image: "assets/images/img-1.jpg",
+    image: "assets/images/img-2.jpeg",
   },
 ];
 
@@ -56,7 +56,21 @@ if (nextBtn) {
     console.log("next button clicked");
   });
 }
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
+    displayCurrentTestimonial();
+    console.log("next button clicked");
+  });
+}
 
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    currentTestimonialIndex =
+      (currentTestimonialIndex - 1 + totalTestimonials) % totalTestimonials;
+    displayCurrentTestimonial();
+  });
+}
 if (prevBtn) {
   prevBtn.addEventListener("click", () => {
     currentTestimonialIndex =
@@ -138,10 +152,74 @@ for (let i = 0; i < languageButtons.length; i++) {
       countryName.textContent = "Xhosa (South Africa)";
     }
 
-    if (buttonValue === "hausa") {
+    if (buttonValue === "Hausa") {
       countryName.textContent = "Hausa";
     }
   });
 }
 
 /*=======END OF SCRIPT FOR GALLERY IMAGE SEARCH=====*/
+
+/*=========CONTACT PAGE SCRIPT WITH EMAIL JS========*/
+emailjs.init("EgrsWVisjrpgLidWI");
+
+const submitBtn = document.querySelector(".submit-btn");
+const contactForm = document.getElementById("contact-form");
+
+window.onload = function () {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    submitBtn.textContent = "Sending...";
+    const serviceID = "service_0milchf";
+    const templateID = "template_5qc19m4";
+    // generate a five digit number for the contact_number variable
+    this.contact_number.value = (Math.random() * 100000) | 0;
+    // these IDs from the previous steps
+    emailjs.sendForm(serviceID, templateID, this).then(
+      function () {
+        console.log("SUCCESS!");
+        submitBtn.textContent = "Message sent successfully...";
+
+        contactForm.reset();
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  });
+};
+/*=========END OF CONTACT PAGE SCRIPT WITH EMAIL JS========*/
+
+/*=========ABOUT PAGE, TAB SCRIPT WITH EMAIL JS========*/
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the first tab button and trigger a click event
+  const firstTabButton = document.querySelector(".tab-btn");
+  if (firstTabButton) {
+    firstTabButton.click();
+  } else {
+    console.error("Tab button not found");
+  }
+});
+
+function tabControl(event, cultureName) {
+  let i, tabContent, tabButtons;
+
+  tabContent = document.getElementsByClassName("culture-tab");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  tabButtons = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].classList.remove("active");
+  }
+
+  const selectedTab = document.getElementById(cultureName);
+  if (selectedTab) {
+    selectedTab.style.display = "block";
+    event.currentTarget.classList.add("active");
+  } else {
+    console.error(`Element with ID ${cultureName} not found`);
+  }
+}

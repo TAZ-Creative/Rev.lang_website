@@ -43,28 +43,34 @@
       <header>
         <h1>Contact Us</h1>
         <p>
-          Apart from languages, you can also familiarise yourself with the
-          culture of the people whose language you are learning
+          Let us know how we can help you. We are also open to receiving your suggestions.
         </p>
       </header>
     </div>
     <main class="gallery-content max-width">
-        <section class="contact-section">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-              <p class="bold">Name:</p>
-              <input type="text" id="name" name="name" required>
-    
-              <p class="bold">Email address:</p>
-              <input type="email" id="email" name="email" required>
-    
-              <p class="bold">Message:</p>
-              <textarea id="message" name="message" rows="4" required></textarea>
-    
-              <button type="submit">Submit</button>
-            </form>
-          </section>
-        </main>
+      <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <input type="hidden" name="contact_number">
+          <div>
+            <label class="bold">Name:</label>
+            <input type="text" id="from_name" name="from_name" required />
+          </div>
+
+          <div>
+            <label class="bold">Email address:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label class="bold">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+    </main>
 
     <footer>
       <main class="footer-container max-width">
@@ -72,8 +78,8 @@
           <img src="assets/images/rev-logo.png" alt="" />
           <ul>
             <li><a href="https://www.linkedin.com/in/firstazeem">The Creator</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
@@ -91,6 +97,7 @@
       </main>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

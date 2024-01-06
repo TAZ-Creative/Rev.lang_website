@@ -1,10 +1,10 @@
-const API_KEY = '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'
+import { API_KEY } from "./config.js";
 
-const newWord = document.querySelector(".anyWord")
-const transWord = document.querySelector(".translatedWord")
-translateBtn = document.querySelector(".translate-btn")
-nxtBtn = document.querySelector(".generate-btn")
-speakBtn = document.querySelector("#listen-btn")
+const newWord = document.querySelector(".anyWord");
+const transWord = document.querySelector(".translatedWord");
+const translateBtn = document.querySelector(".translate-btn");
+const nxtBtn = document.querySelector(".generate-btn");
+const speakBtn = document.querySelector("#listen-btn");
 
 const xhosaWord = ["Uxolo"];
 
@@ -12,8 +12,8 @@ newWord.textContent = xhosaWord[0]
 
 translateBtn.addEventListener("click", () => {
     let word = newWord.textContent; //takes the word being displayed
-    translateFrom = "xh-ZA"; //langauge value to translate from
-    translateTo = "en-GB"; //language value to translate to -- always English
+    let translateFrom = "xh-ZA"; //langauge value to translate from
+    let translateTo = "en-GB"; //language value to translate to -- always English
 
     let apiUrl = `https://api.mymemory.translated.net/get?q=${word}&langpair=${translateFrom}|${translateTo}`
     fetch(apiUrl)

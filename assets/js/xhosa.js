@@ -6,13 +6,13 @@ translateBtn = document.querySelector(".translate-btn")
 nxtBtn = document.querySelector(".generate-btn")
 speakBtn = document.querySelector("#listen-btn")
 
-const yorubaWord = ["káàbọ̀"];
+const xhosaWord = ["káàbọ̀"];
 
-newWord.textContent = yorubaWord[0]
+newWord.textContent = xhosaWord[0]
 
 translateBtn.addEventListener("click", () => {
     let word = newWord.textContent; //takes the word being displayed
-    translateFrom = "yo-NG"; //langauge value to translate from
+    translateFrom = "xh-ZA"; //langauge value to translate from
     translateTo = "en-GB"; //language value to translate to -- always English
 
     let apiUrl = `https://api.mymemory.translated.net/get?q=${word}&langpair=${translateFrom}|${translateTo}`
@@ -41,7 +41,7 @@ nxtBtn.addEventListener("click", () => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: "Generate an everyday word in Yoruba language. Strictly write only this single word and nothing else." }]
+            messages: [{ role: "user", content: "Generate an everyday word in Xhosa language. Strictly write only this single word and nothing else." }]
         })
     })
         .then(response => response.json())

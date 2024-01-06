@@ -12,7 +12,7 @@ newWord.textContent = hausaWord[0]
 
 translateBtn.addEventListener("click", () => {
     let word = newWord.textContent; //takes the word being displayed
-    translateFrom = "ha-NG"; //langauge value to translate from
+    translateFrom = "ha-NE"; //langauge value to translate from
     translateTo = "en-GB"; //language value to translate to -- always English
 
     let apiUrl = `https://api.mymemory.translated.net/get?q=${word}&langpair=${translateFrom}|${translateTo}`

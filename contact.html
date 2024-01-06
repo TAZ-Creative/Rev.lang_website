@@ -28,10 +28,10 @@
         </div>
 
         <ul class="nav-links navbar__items">
-            <li class="nav-item"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="about.html">About</a></li>
-            <li class="nav-item"><a href="gallery.html">Discover</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="gallery.html">Discover</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
 
         <div class="cta-container navbar__items">
@@ -39,30 +39,32 @@
         </div>
       </div>
     </nav>
-    <div class="body--wrapper">
-      <main class="app--container max-width">
-        <header>
-          <h1>Let’s learn some everyday Hausa words.</h1>
-          <p>Click generate to see a random word</p>
-        </header>
-
-        <div class="container">
-          <article class="word--card">
-            <div>
-              <h4 class="anyWord" id="yoruba"></h4>
-              <button id="listen-btn">Hear it</button>
-              <p class="translatedWord"> </p>
-            </div>
-            <button class="translate-btn">See English Meaning</button>
-          </article>
-
-          <article class="btn-group">
-            <button class="nav--btn">Exit</button>
-            <button class="generate-btn">Next Word</button>
-          </article>
-        </div>
-      </main>
+    <div class="gallery-header">
+      <header>
+        <h1>Contact Us</h1>
+        <p>
+          Apart from languages, you can also familiarise yourself with the
+          culture of the people whose language you are learning
+        </p>
+      </header>
     </div>
+    <main class="gallery-content max-width">
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+              <p class="bold">Name:</p>
+              <input type="text" id="name" name="name" required>
+    
+              <p class="bold">Email address:</p>
+              <input type="email" id="email" name="email" required>
+    
+              <p class="bold">Message:</p>
+              <textarea id="message" name="message" rows="4" required></textarea>
+    
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+        </main>
 
     <footer>
       <main class="footer-container max-width">
@@ -90,6 +92,5 @@
     </footer>
 
     <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/hausa.js"></script>
   </body>
 </html>

@@ -610,12 +610,12 @@ nav {
   vertical-align: middle;
   display: inline-block;
 }
-.gallery--wrapper > div {
+.gallery--wrapper > a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.gallery--wrapper > div > img {
+.gallery--wrapper > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -653,12 +653,12 @@ nav {
   flex-direction: column;
 }
 
-label {
+.contact-section label {
   margin-top: 10px;
   color: #333;
 }
 
-input, textarea {
+.contact-section input, .contact-section textarea {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -667,7 +667,7 @@ input, textarea {
   box-sizing: border-box;
 }
 
-button {
+.contact-section button {
   padding: 10px;
   background-color: #007BFF;
   color: #fff;
@@ -677,7 +677,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+.contact-section button:hover {
   background-color: #0056b3;
 }
 

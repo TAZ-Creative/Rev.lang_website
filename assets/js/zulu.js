@@ -1,4 +1,4 @@
-const API_KEY = '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'
+const API_KEY = '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'
 
 const newWord = document.querySelector(".anyWord")
 const transWord = document.querySelector(".translatedWord")
@@ -12,8 +12,8 @@ newWord.textContent = zuluWord[0]
 
 translateBtn.addEventListener("click", () => {
     let word = newWord.textContent; //takes the word being displayed
-    translateFrom = "zu-ZA"; //langauge value to translate from
-    translateTo = "en-GB"; //language value to translate to -- always English
+    let translateFrom = "zu-ZA"; //langauge value to translate from
+    let translateTo = "en-GB"; //language value to translate to -- always English
 
     let apiUrl = `https://api.mymemory.translated.net/get?q=${word}&langpair=${translateFrom}|${translateTo}`
     fetch(apiUrl)

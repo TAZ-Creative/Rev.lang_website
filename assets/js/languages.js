@@ -1,4 +1,4 @@
-const API_KEY = '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';
+const API_KEY = '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';
 
 // Configuration for each language
 const languages = {
@@ -28,7 +28,6 @@ const nxtBtn = document.querySelector(".generate-btn");
 const speakBtn = document.querySelector("#listen-btn");
 const languageTitle = document.getElementById("languageTitle");
 const languageWord = document.getElementById("languageWord");
-
 
 
 let currentLanguage = getCurrentLanguageFromUrl(); // name of language from URL
@@ -67,8 +66,9 @@ function initializeLanguage(language) {
 translateBtn.addEventListener("click", translateWord);
 
 speakBtn.addEventListener("click", () => {
-  const hearIt = new SpeechSynthesisUtterance(newWord.textContent);
-  hearIt.lang = languages[currentLanguage].languageCode;
+    const hearIt = new SpeechSynthesisUtterance(newWord.textContent);
+    hearIt.lang = languages[currentLanguage].languageCode;
+    window.speechSynthesis.speak(hearIt);
 });
 
 //Generate New Word
@@ -94,3 +94,7 @@ nxtBtn.addEventListener("click", () => {
       console.error('Error fetching data from OpenAI API:', error);
     });
 });
+
+
+
+initializeLanguage(currentLanguage);

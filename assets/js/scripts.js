@@ -99,7 +99,12 @@ const searchResultDisplay = document.querySelector(".gallery--wrapper");
 const countryName = document.querySelector(".country-name");
 
 let keyword = "";
-let page = 1;
+let page = getRandomNumber(1, 20);
+
+//Randomize the page galleries
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 async function fetchImages(keyword) {
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}`;
@@ -144,7 +149,7 @@ for (let i = 0; i < languageButtons.length; i++) {
       countryName.textContent = "Yoruba";
     }
 
-    if (buttonValue === "zulu") {
+    if (buttonValue === "Zulu tribe") {
       countryName.textContent = "Zulu";
     }
 
@@ -152,7 +157,7 @@ for (let i = 0; i < languageButtons.length; i++) {
       countryName.textContent = "Xhosa (South Africa)";
     }
 
-    if (buttonValue === "Hausa") {
+    if (buttonValue === "North Nigeria") {
       countryName.textContent = "Hausa";
     }
   });
@@ -160,36 +165,7 @@ for (let i = 0; i < languageButtons.length; i++) {
 
 /*=======END OF SCRIPT FOR GALLERY IMAGE SEARCH=====*/
 
-/*=========CONTACT PAGE SCRIPT WITH EMAIL JS========*/
-emailjs.init("EgrsWVisjrpgLidWI");
 
-const submitBtn = document.querySelector(".submit-btn");
-const contactForm = document.getElementById("contact-form");
-
-window.onload = function () {
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    submitBtn.textContent = "Sending...";
-    const serviceID = "service_0milchf";
-    const templateID = "template_5qc19m4";
-    // generate a five digit number for the contact_number variable
-    this.contact_number.value = (Math.random() * 100000) | 0;
-    // these IDs from the previous steps
-    emailjs.sendForm(serviceID, templateID, this).then(
-      function () {
-        console.log("SUCCESS!");
-        submitBtn.textContent = "Message sent successfully...";
-
-        contactForm.reset();
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-  });
-};
-/*=========END OF CONTACT PAGE SCRIPT WITH EMAIL JS========*/
 
 /*=========ABOUT PAGE, TAB SCRIPT WITH EMAIL JS========*/
 document.addEventListener("DOMContentLoaded", function () {
